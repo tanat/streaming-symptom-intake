@@ -1,0 +1,22 @@
+{
+  "complaintId": "asthma-exacerbation-male-22",
+  "expectedSectionIds": ["vitals", "asthma_severity", "history"],
+  "expectedFieldIds": [
+    "pulse",
+    "spo2",
+    "resp_rate",
+    "peak_flow",
+    "wheeze_severity",
+    "albuterol_uses_today",
+    "able_to_speak_full_sentences",
+    "prior_intubation",
+    "icu_admission_history",
+    "controller_meds_used"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "resp_rate",
+    "albuterol_uses_today",
+    "prior_intubation"
+  ]
+}

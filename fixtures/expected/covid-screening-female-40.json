@@ -1,0 +1,16 @@
+{
+  "complaintId": "covid-screening-female-40",
+  "expectedSectionIds": ["vitals", "symptoms", "exposure"],
+  "expectedFieldIds": [
+    "temperature_c",
+    "spo2",
+    "resp_rate",
+    "cough_present",
+    "sore_throat",
+    "loss_of_taste_smell",
+    "associated_symptoms",
+    "sick_contact",
+    "vaccination_status"
+  ],
+  "criticalFieldIds": ["spo2", "temperature_c", "sick_contact"]
+}

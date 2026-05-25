@@ -1,0 +1,22 @@
+{
+  "complaintId": "hemoptysis-male-58-smoker",
+  "expectedSectionIds": ["vitals", "symptoms", "history"],
+  "expectedFieldIds": [
+    "pulse",
+    "spo2",
+    "resp_rate",
+    "blood_amount",
+    "hemoptysis_duration_days",
+    "weight_loss_kg",
+    "night_sweats",
+    "smoking_pack_years",
+    "tb_risk_factors",
+    "cancer_history"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "blood_amount",
+    "smoking_pack_years",
+    "weight_loss_kg"
+  ]
+}

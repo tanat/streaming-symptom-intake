@@ -1,0 +1,25 @@
+{
+  "complaintId": "leg-swelling-male-60",
+  "expectedSectionIds": ["vitals", "symptoms", "history"],
+  "expectedFieldIds": [
+    "bp_systolic",
+    "bp_diastolic",
+    "pulse",
+    "spo2",
+    "weight_change_kg",
+    "edema_severity",
+    "edema_laterality",
+    "dyspnea_severity",
+    "orthopnea",
+    "pnd",
+    "hx_chf",
+    "hx_dm",
+    "hx_htn"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "edema_laterality",
+    "dyspnea_severity",
+    "hx_chf"
+  ]
+}

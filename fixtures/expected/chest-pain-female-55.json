@@ -1,0 +1,26 @@
+{
+  "complaintId": "chest-pain-female-55",
+  "expectedSectionIds": ["vitals", "opqrst", "cardiac_risk", "associated"],
+  "expectedFieldIds": [
+    "bp_systolic",
+    "bp_diastolic",
+    "pulse",
+    "spo2",
+    "pain_onset",
+    "pain_quality",
+    "pain_radiation",
+    "pain_severity",
+    "associated_symptoms",
+    "hx_htn",
+    "hx_dm",
+    "hx_smoker",
+    "hx_prior_mi",
+    "hx_family_cad"
+  ],
+  "criticalFieldIds": [
+    "bp_systolic",
+    "pulse",
+    "pain_radiation",
+    "pain_severity"
+  ]
+}

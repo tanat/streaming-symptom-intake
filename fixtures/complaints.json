@@ -1,0 +1,102 @@
+[
+  {
+    "id": "chest-pain-female-55",
+    "category": "cardiac",
+    "complaint": "55-year-old female, chest pressure radiating to jaw, started 2 hours ago, nauseous and diaphoretic."
+  },
+  {
+    "id": "chest-pain-male-68-exertional",
+    "category": "cardiac",
+    "complaint": "68-year-old male, retrosternal chest pain on exertion for 1 week, relieved by rest, history of HTN and DM."
+  },
+  {
+    "id": "palpitations-female-32",
+    "category": "cardiac",
+    "complaint": "32-year-old female, sudden onset palpitations and lightheadedness, episodic over the past 3 days."
+  },
+  {
+    "id": "syncope-male-72",
+    "category": "cardiac",
+    "complaint": "72-year-old male, witnessed syncope while standing in line, no prodrome, woke up confused for 30 seconds."
+  },
+  {
+    "id": "leg-swelling-male-60",
+    "category": "cardiac",
+    "complaint": "60-year-old male with worsening bilateral leg swelling and dyspnea on exertion, weight up 5 kg in 2 weeks."
+  },
+  {
+    "id": "sob-acute-female-27",
+    "category": "respiratory",
+    "complaint": "27-year-old female, sudden-onset shortness of breath, palpitations and tingling in fingers; reports recent panic attacks."
+  },
+  {
+    "id": "asthma-exacerbation-male-22",
+    "category": "respiratory",
+    "complaint": "22-year-old male, audible wheezing and chest tightness, used albuterol four times today with little relief."
+  },
+  {
+    "id": "cough-fever-adult-45",
+    "category": "respiratory",
+    "complaint": "45-year-old, productive cough with green sputum and fever 38.7°C for 4 days, worse with deep breath."
+  },
+  {
+    "id": "hemoptysis-male-58-smoker",
+    "category": "respiratory",
+    "complaint": "58-year-old male, 30-pack-year smoker, blood-streaked sputum for one week, 4 kg weight loss."
+  },
+  {
+    "id": "covid-screening-female-40",
+    "category": "respiratory",
+    "complaint": "40-year-old, dry cough, sore throat, mild fever, sick contact at work, asking about testing."
+  },
+  {
+    "id": "pediatric-fever-toddler-14m",
+    "category": "pediatric",
+    "complaint": "14-month-old toddler, fever 39.4°C for 2 days, decreased appetite, mild rash on torso."
+  },
+  {
+    "id": "pediatric-cough-bronchiolitis-8m",
+    "category": "pediatric",
+    "complaint": "8-month-old infant, runny nose 3 days ago, now wheezing, fast breathing and poor feeding."
+  },
+  {
+    "id": "pediatric-ear-pain-3y",
+    "category": "pediatric",
+    "complaint": "3-year-old, pulling at the right ear since last night, fever 38.4°C, recent URI."
+  },
+  {
+    "id": "pediatric-vomiting-5y",
+    "category": "pediatric",
+    "complaint": "5-year-old, repeated vomiting and diarrhea for 24 hours, fewer wet diapers, no fever."
+  },
+  {
+    "id": "pediatric-newborn-jaundice-5d",
+    "category": "pediatric",
+    "complaint": "5-day-old newborn, yellow skin and sclerae, breastfed, decreased feeding, no fever."
+  },
+  {
+    "id": "headache-thunderclap-male-32",
+    "category": "other",
+    "complaint": "32-year-old male, sudden severe headache, 'worst of life', photophobia and neck stiffness."
+  },
+  {
+    "id": "abdominal-pain-female-29-rlq",
+    "category": "other",
+    "complaint": "29-year-old female, periumbilical pain migrating to right lower quadrant, anorexia, low-grade fever."
+  },
+  {
+    "id": "back-pain-male-44-trauma",
+    "category": "other",
+    "complaint": "44-year-old male, lower back pain after lifting heavy box yesterday, no leg weakness or numbness."
+  },
+  {
+    "id": "rash-female-23-allergic",
+    "category": "other",
+    "complaint": "23-year-old female, sudden urticarial rash and lip swelling 30 minutes after eating shrimp."
+  },
+  {
+    "id": "depression-suicidal-male-19",
+    "category": "other",
+    "complaint": "19-year-old male, two weeks of low mood and anhedonia, told friend he is 'thinking about ending it'."
+  }
+]

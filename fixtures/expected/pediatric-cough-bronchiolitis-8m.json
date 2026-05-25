@@ -1,0 +1,22 @@
+{
+  "complaintId": "pediatric-cough-bronchiolitis-8m",
+  "expectedSectionIds": ["vitals", "respiratory", "feeding"],
+  "expectedFieldIds": [
+    "age_months",
+    "temperature_c",
+    "pulse",
+    "spo2",
+    "resp_rate",
+    "work_of_breathing",
+    "wheezing",
+    "feeding_amount",
+    "wet_diapers_24h",
+    "immunizations_up_to_date"
+  ],
+  "criticalFieldIds": [
+    "age_months",
+    "spo2",
+    "resp_rate",
+    "feeding_amount"
+  ]
+}

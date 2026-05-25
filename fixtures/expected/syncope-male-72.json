@@ -1,0 +1,23 @@
+{
+  "complaintId": "syncope-male-72",
+  "expectedSectionIds": ["vitals", "episode", "history"],
+  "expectedFieldIds": [
+    "bp_systolic",
+    "bp_diastolic",
+    "pulse",
+    "orthostatic_check",
+    "episode_onset",
+    "loss_of_consciousness",
+    "prodrome",
+    "post_event_confusion",
+    "head_injury",
+    "cardiac_history",
+    "medications"
+  ],
+  "criticalFieldIds": [
+    "bp_systolic",
+    "pulse",
+    "loss_of_consciousness",
+    "head_injury"
+  ]
+}

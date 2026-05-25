@@ -1,0 +1,23 @@
+{
+  "complaintId": "pediatric-newborn-jaundice-5d",
+  "expectedSectionIds": ["vitals", "feeding", "history"],
+  "expectedFieldIds": [
+    "age_days",
+    "weight_kg",
+    "temperature_c",
+    "jaundice_extent",
+    "feeding_type",
+    "feeding_amount",
+    "wet_diapers_24h",
+    "stool_color",
+    "birth_weight_kg",
+    "blood_type_mismatch_risk",
+    "gestational_age_weeks"
+  ],
+  "criticalFieldIds": [
+    "age_days",
+    "feeding_amount",
+    "wet_diapers_24h",
+    "stool_color"
+  ]
+}

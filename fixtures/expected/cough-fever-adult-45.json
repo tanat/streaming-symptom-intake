@@ -1,0 +1,23 @@
+{
+  "complaintId": "cough-fever-adult-45",
+  "expectedSectionIds": ["vitals", "symptoms", "history"],
+  "expectedFieldIds": [
+    "temperature_c",
+    "pulse",
+    "spo2",
+    "resp_rate",
+    "cough_duration_days",
+    "sputum_color",
+    "pleuritic_chest_pain",
+    "dyspnea_severity",
+    "associated_symptoms",
+    "smoking_status",
+    "vaccinations"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "resp_rate",
+    "pleuritic_chest_pain",
+    "temperature_c"
+  ]
+}

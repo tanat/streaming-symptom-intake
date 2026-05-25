@@ -1,0 +1,23 @@
+{
+  "complaintId": "depression-suicidal-male-19",
+  "expectedSectionIds": ["safety", "mood", "history"],
+  "expectedFieldIds": [
+    "suicidal_ideation",
+    "suicide_plan",
+    "suicide_means_access",
+    "self_harm_history",
+    "mood_severity",
+    "anhedonia",
+    "sleep_change",
+    "appetite_change",
+    "substance_use",
+    "psych_history",
+    "social_supports"
+  ],
+  "criticalFieldIds": [
+    "suicidal_ideation",
+    "suicide_plan",
+    "suicide_means_access",
+    "self_harm_history"
+  ]
+}

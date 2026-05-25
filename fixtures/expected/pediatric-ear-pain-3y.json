@@ -1,0 +1,20 @@
+{
+  "complaintId": "pediatric-ear-pain-3y",
+  "expectedSectionIds": ["vitals", "ear_symptoms", "pmh"],
+  "expectedFieldIds": [
+    "age_years",
+    "temperature_c",
+    "ear_affected",
+    "pain_severity",
+    "ear_drainage",
+    "hearing_change",
+    "associated_symptoms",
+    "prior_ear_infections",
+    "immunizations_up_to_date"
+  ],
+  "criticalFieldIds": [
+    "ear_affected",
+    "temperature_c",
+    "ear_drainage"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "complaintId": "headache-thunderclap-male-32",
+  "expectedSectionIds": ["vitals", "headache", "neuro", "history"],
+  "expectedFieldIds": [
+    "bp_systolic",
+    "bp_diastolic",
+    "pulse",
+    "temperature_c",
+    "headache_onset",
+    "headache_severity",
+    "thunderclap_quality",
+    "neck_stiffness",
+    "photophobia",
+    "vision_changes",
+    "focal_weakness",
+    "fever_present",
+    "anticoagulant_use"
+  ],
+  "criticalFieldIds": [
+    "headache_severity",
+    "thunderclap_quality",
+    "neck_stiffness",
+    "focal_weakness"
+  ]
+}

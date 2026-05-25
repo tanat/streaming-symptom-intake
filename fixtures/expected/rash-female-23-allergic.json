@@ -1,0 +1,24 @@
+{
+  "complaintId": "rash-female-23-allergic",
+  "expectedSectionIds": ["vitals", "reaction", "history"],
+  "expectedFieldIds": [
+    "pulse",
+    "bp_systolic",
+    "spo2",
+    "resp_rate",
+    "rash_extent",
+    "lip_tongue_swelling",
+    "throat_tightness",
+    "wheeze_present",
+    "trigger_food",
+    "prior_anaphylaxis",
+    "epipen_used",
+    "current_medications"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "lip_tongue_swelling",
+    "throat_tightness",
+    "epipen_used"
+  ]
+}

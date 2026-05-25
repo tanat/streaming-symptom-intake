@@ -1,0 +1,21 @@
+{
+  "complaintId": "pediatric-vomiting-5y",
+  "expectedSectionIds": ["vitals", "symptoms", "hydration"],
+  "expectedFieldIds": [
+    "age_years",
+    "temperature_c",
+    "pulse",
+    "vomiting_frequency_24h",
+    "diarrhea_frequency_24h",
+    "blood_in_stool",
+    "able_to_keep_fluids_down",
+    "wet_diapers_24h",
+    "weight_kg",
+    "sick_contacts"
+  ],
+  "criticalFieldIds": [
+    "able_to_keep_fluids_down",
+    "wet_diapers_24h",
+    "blood_in_stool"
+  ]
+}

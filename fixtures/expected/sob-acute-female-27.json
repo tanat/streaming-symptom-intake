@@ -1,0 +1,23 @@
+{
+  "complaintId": "sob-acute-female-27",
+  "expectedSectionIds": ["vitals", "episode", "safety", "history"],
+  "expectedFieldIds": [
+    "pulse",
+    "spo2",
+    "resp_rate",
+    "symptom_onset",
+    "anxiety_severity",
+    "dyspnea_severity",
+    "episode_triggers",
+    "suicidal_ideation",
+    "substance_use",
+    "prior_panic_episodes",
+    "recent_pe_risk"
+  ],
+  "criticalFieldIds": [
+    "spo2",
+    "resp_rate",
+    "suicidal_ideation",
+    "recent_pe_risk"
+  ]
+}

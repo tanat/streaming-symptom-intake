@@ -1,0 +1,24 @@
+{
+  "complaintId": "abdominal-pain-female-29-rlq",
+  "expectedSectionIds": ["vitals", "pain_history", "associated", "obgyn"],
+  "expectedFieldIds": [
+    "temperature_c",
+    "pulse",
+    "bp_systolic",
+    "pain_onset",
+    "pain_location",
+    "pain_severity",
+    "pain_migration",
+    "anorexia",
+    "nausea_vomiting",
+    "last_menstrual_period",
+    "pregnancy_possible",
+    "associated_symptoms"
+  ],
+  "criticalFieldIds": [
+    "pain_location",
+    "pain_severity",
+    "pregnancy_possible",
+    "last_menstrual_period"
+  ]
+}

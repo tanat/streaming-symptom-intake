@@ -1,0 +1,22 @@
+{
+  "complaintId": "back-pain-male-44-trauma",
+  "expectedSectionIds": ["vitals", "pain_history", "red_flags"],
+  "expectedFieldIds": [
+    "pulse",
+    "bp_systolic",
+    "pain_onset",
+    "pain_severity",
+    "pain_radiation",
+    "mechanism_of_injury",
+    "leg_weakness",
+    "saddle_anesthesia",
+    "bowel_bladder_dysfunction",
+    "fever_present",
+    "iv_drug_use"
+  ],
+  "criticalFieldIds": [
+    "leg_weakness",
+    "saddle_anesthesia",
+    "bowel_bladder_dysfunction"
+  ]
+}

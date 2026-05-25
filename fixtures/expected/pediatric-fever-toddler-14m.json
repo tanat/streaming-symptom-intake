@@ -1,0 +1,23 @@
+{
+  "complaintId": "pediatric-fever-toddler-14m",
+  "expectedSectionIds": ["vitals", "fever_history", "associated", "pmh"],
+  "expectedFieldIds": [
+    "age_months",
+    "temperature_c",
+    "temp_route",
+    "pulse",
+    "fever_onset",
+    "fever_duration_days",
+    "highest_temp_c",
+    "associated_symptoms",
+    "wet_diapers_24h",
+    "immunizations_up_to_date",
+    "sick_contacts"
+  ],
+  "criticalFieldIds": [
+    "age_months",
+    "temperature_c",
+    "wet_diapers_24h",
+    "immunizations_up_to_date"
+  ]
+}

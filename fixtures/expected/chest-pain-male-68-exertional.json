@@ -1,0 +1,19 @@
+{
+  "complaintId": "chest-pain-male-68-exertional",
+  "expectedSectionIds": ["vitals", "opqrst", "cardiac_risk"],
+  "expectedFieldIds": [
+    "bp_systolic",
+    "bp_diastolic",
+    "pulse",
+    "spo2",
+    "pain_onset",
+    "pain_quality",
+    "pain_severity",
+    "exertion_relation",
+    "hx_htn",
+    "hx_dm",
+    "hx_smoker",
+    "hx_prior_mi"
+  ],
+  "criticalFieldIds": ["bp_systolic", "pulse", "pain_severity", "hx_dm"]
+}

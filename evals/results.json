@@ -432,5 +432,439 @@
       "timeToFirstFieldP50Ms": 2219,
       "timeToFirstFieldP95Ms": 3469
     }
+  },
+  {
+    "runId": "2026-05-28T16:13:33.631Z",
+    "schemaVersion": "v1.0.0",
+    "promptVersion": "v1.0.0",
+    "model": "gemini-2.5-flash",
+    "perComplaint": [
+      {
+        "complaintId": "chest-pain-female-55",
+        "fieldJaccard": 1,
+        "sectionJaccard": 0.75,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2904,
+        "totalMs": 5264
+      },
+      {
+        "complaintId": "chest-pain-male-68-exertional",
+        "fieldJaccard": 0.5,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 6912,
+        "totalMs": 13469
+      },
+      {
+        "complaintId": "palpitations-female-32",
+        "fieldJaccard": 0.24,
+        "sectionJaccard": 0.2,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 7152,
+        "totalMs": 11328
+      },
+      {
+        "complaintId": "syncope-male-72",
+        "fieldJaccard": 0.1724137931034483,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 10224,
+        "totalMs": 20400
+      },
+      {
+        "complaintId": "leg-swelling-male-60",
+        "fieldJaccard": 0.32,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 5432,
+        "totalMs": 11517
+      },
+      {
+        "complaintId": "sob-acute-female-27",
+        "fieldJaccard": 0.8461538461538461,
+        "sectionJaccard": 0.6,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1188,
+        "totalMs": 2952
+      },
+      {
+        "complaintId": "asthma-exacerbation-male-22",
+        "fieldJaccard": 0.19047619047619047,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2468,
+        "totalMs": 5078
+      },
+      {
+        "complaintId": "cough-fever-adult-45",
+        "fieldJaccard": 0.30434782608695654,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 7463,
+        "totalMs": 10764
+      },
+      {
+        "complaintId": "hemoptysis-male-58-smoker",
+        "fieldJaccard": 0.1724137931034483,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 15378,
+        "totalMs": 23816
+      },
+      {
+        "complaintId": "covid-screening-female-40",
+        "fieldJaccard": 0.16666666666666666,
+        "sectionJaccard": 0.2,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.6666666666666666,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 8396,
+        "totalMs": 16014
+      },
+      {
+        "complaintId": "pediatric-fever-toddler-14m",
+        "fieldJaccard": 0,
+        "sectionJaccard": 0,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0,
+        "partialRenderSafe": false,
+        "timeToFirstFieldMs": null,
+        "totalMs": null
+      },
+      {
+        "complaintId": "pediatric-cough-bronchiolitis-8m",
+        "fieldJaccard": 0.2692307692307692,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 6962,
+        "totalMs": 12838
+      },
+      {
+        "complaintId": "pediatric-ear-pain-3y",
+        "fieldJaccard": 0.14814814814814814,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.3333333333333333,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 6369,
+        "totalMs": 10246
+      },
+      {
+        "complaintId": "pediatric-vomiting-5y",
+        "fieldJaccard": 0.20689655172413793,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.3333333333333333,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 7419,
+        "totalMs": 15191
+      },
+      {
+        "complaintId": "pediatric-newborn-jaundice-5d",
+        "fieldJaccard": 0.15384615384615385,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 9860,
+        "totalMs": 14882
+      },
+      {
+        "complaintId": "headache-thunderclap-male-32",
+        "fieldJaccard": 0.28125,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 7974,
+        "totalMs": 15706
+      },
+      {
+        "complaintId": "abdominal-pain-female-29-rlq",
+        "fieldJaccard": 0.1875,
+        "sectionJaccard": 0.2857142857142857,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.25,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 6830,
+        "totalMs": 10887
+      },
+      {
+        "complaintId": "back-pain-male-44-trauma",
+        "fieldJaccard": 0.2916666666666667,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.6666666666666666,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 11607,
+        "totalMs": 38147
+      },
+      {
+        "complaintId": "rash-female-23-allergic",
+        "fieldJaccard": 0.15625,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.25,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 17990,
+        "totalMs": 29252
+      },
+      {
+        "complaintId": "depression-suicidal-male-19",
+        "fieldJaccard": 0,
+        "sectionJaccard": 0,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0,
+        "partialRenderSafe": false,
+        "timeToFirstFieldMs": null,
+        "totalMs": null
+      }
+    ],
+    "aggregate": {
+      "fieldJaccard": 0.2803630202603216,
+      "sectionJaccard": 0.20654761904761904,
+      "criticalFieldHit": 0.2,
+      "criticalFieldHitRate": 0.5875000000000001,
+      "partialRenderSafe": 0.9,
+      "timeToFirstFieldP50Ms": 7152,
+      "timeToFirstFieldP95Ms": 17990
+    }
+  },
+  {
+    "runId": "2026-05-28T16:17:58.452Z",
+    "schemaVersion": "v1.0.0",
+    "promptVersion": "v1.0.0",
+    "model": "claude-haiku-4-5",
+    "perComplaint": [
+      {
+        "complaintId": "chest-pain-female-55",
+        "fieldJaccard": 0.30303030303030304,
+        "sectionJaccard": 0.2857142857142857,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 22761,
+        "totalMs": 28253
+      },
+      {
+        "complaintId": "chest-pain-male-68-exertional",
+        "fieldJaccard": 0.39285714285714285,
+        "sectionJaccard": 0.75,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2091,
+        "totalMs": 7937
+      },
+      {
+        "complaintId": "palpitations-female-32",
+        "fieldJaccard": 0.17857142857142858,
+        "sectionJaccard": 0.125,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.6666666666666666,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1556,
+        "totalMs": 8743
+      },
+      {
+        "complaintId": "syncope-male-72",
+        "fieldJaccard": 0.12195121951219512,
+        "sectionJaccard": 0.125,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1532,
+        "totalMs": 9234
+      },
+      {
+        "complaintId": "leg-swelling-male-60",
+        "fieldJaccard": 0.21875,
+        "sectionJaccard": 0.1111111111111111,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1569,
+        "totalMs": 9152
+      },
+      {
+        "complaintId": "sob-acute-female-27",
+        "fieldJaccard": 0.32142857142857145,
+        "sectionJaccard": 0.5,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1917,
+        "totalMs": 9048
+      },
+      {
+        "complaintId": "asthma-exacerbation-male-22",
+        "fieldJaccard": 0.14285714285714285,
+        "sectionJaccard": 0.1111111111111111,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1572,
+        "totalMs": 9441
+      },
+      {
+        "complaintId": "cough-fever-adult-45",
+        "fieldJaccard": 0.25925925925925924,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1674,
+        "totalMs": 10068
+      },
+      {
+        "complaintId": "hemoptysis-male-58-smoker",
+        "fieldJaccard": 0.13513513513513514,
+        "sectionJaccard": 0.125,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1888,
+        "totalMs": 10510
+      },
+      {
+        "complaintId": "covid-screening-female-40",
+        "fieldJaccard": 0.08695652173913043,
+        "sectionJaccard": 0.3333333333333333,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.6666666666666666,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1693,
+        "totalMs": 5393
+      },
+      {
+        "complaintId": "pediatric-fever-toddler-14m",
+        "fieldJaccard": 0.7857142857142857,
+        "sectionJaccard": 1,
+        "criticalFieldHit": true,
+        "criticalFieldHitRate": 1,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1648,
+        "totalMs": 6147
+      },
+      {
+        "complaintId": "pediatric-cough-bronchiolitis-8m",
+        "fieldJaccard": 0.36363636363636365,
+        "sectionJaccard": 0.6,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.75,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1597,
+        "totalMs": 7950
+      },
+      {
+        "complaintId": "pediatric-ear-pain-3y",
+        "fieldJaccard": 0.3684210526315789,
+        "sectionJaccard": 0.6,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.6666666666666666,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1758,
+        "totalMs": 6112
+      },
+      {
+        "complaintId": "pediatric-vomiting-5y",
+        "fieldJaccard": 0.13333333333333333,
+        "sectionJaccard": 0.2857142857142857,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.3333333333333333,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1741,
+        "totalMs": 8959
+      },
+      {
+        "complaintId": "pediatric-newborn-jaundice-5d",
+        "fieldJaccard": 0.10714285714285714,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2106,
+        "totalMs": 9759
+      },
+      {
+        "complaintId": "headache-thunderclap-male-32",
+        "fieldJaccard": 0.20689655172413793,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.25,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1749,
+        "totalMs": 6432
+      },
+      {
+        "complaintId": "abdominal-pain-female-29-rlq",
+        "fieldJaccard": 0.20588235294117646,
+        "sectionJaccard": 0.2857142857142857,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1703,
+        "totalMs": 9957
+      },
+      {
+        "complaintId": "back-pain-male-44-trauma",
+        "fieldJaccard": 0.20689655172413793,
+        "sectionJaccard": 0.2857142857142857,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.3333333333333333,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2262,
+        "totalMs": 10210
+      },
+      {
+        "complaintId": "rash-female-23-allergic",
+        "fieldJaccard": 0.23076923076923078,
+        "sectionJaccard": 0.16666666666666666,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.5,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 2020,
+        "totalMs": 6205
+      },
+      {
+        "complaintId": "depression-suicidal-male-19",
+        "fieldJaccard": 0.10714285714285714,
+        "sectionJaccard": 0.14285714285714285,
+        "criticalFieldHit": false,
+        "criticalFieldHitRate": 0.25,
+        "partialRenderSafe": true,
+        "timeToFirstFieldMs": 1640,
+        "totalMs": 8414
+      }
+    ],
+    "aggregate": {
+      "fieldJaccard": 0.24383160805751336,
+      "sectionJaccard": 0.31307539682539687,
+      "criticalFieldHit": 0.15,
+      "criticalFieldHitRate": 0.6208333333333333,
+      "partialRenderSafe": 1,
+      "timeToFirstFieldP50Ms": 1703,
+      "timeToFirstFieldP95Ms": 2262
+    }
   }
 ]

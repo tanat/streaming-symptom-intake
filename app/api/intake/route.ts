@@ -1,5 +1,4 @@
 import { streamText, Output, gateway } from 'ai';
-import { google } from '@ai-sdk/google';
 import { FormSpec, SCHEMA_VERSION } from '@/schemas/v1/form-spec';
 import { intakeSystemPrompt, PROMPT_VERSION } from '@/intake/prompt';
 import { appendToSessionLog } from '@/intake/log';
@@ -33,7 +32,7 @@ export async function POST(req: Request) {
     : 'claude-haiku-4-5';
   const llm =
     modelKey === 'gpt-mini' ? gateway('openai/gpt-4o-mini')
-    : modelKey === 'gemini' ? google('gemini-2.5-flash')
+    : modelKey === 'gemini' ? gateway('google/gemini-2.5-flash')
     : gateway('anthropic/claude-haiku-4-5');
 
   const sessionId =
@@ -59,9 +58,6 @@ export async function POST(req: Request) {
     prompt: complaint,
     ...(modelKey === 'gpt-mini' && {
       providerOptions: { openai: { strictJsonSchema: false } },
-    }),
-    ...(modelKey === 'gemini' && {
-      providerOptions: { google: { structuredOutputs: false } },
     }),
     onFinish: async ({ usage }) => {
       // streamText's onFinish event no longer carries the parsed output;

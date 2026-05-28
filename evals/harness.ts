@@ -14,9 +14,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { config } from 'dotenv';
-config({ path: path.join(process.cwd(), '.env.local') });
 import { streamText, Output, gateway } from 'ai';
-import { google } from '@ai-sdk/google';
 import {
   FormSpec,
   SCHEMA_VERSION,
@@ -38,6 +36,8 @@ const RESULTS_FILE = path.join(ROOT, 'evals', 'results.json');
 type Fixture = { id: string; category: string; complaint: string };
 
 type CliArgs = { model: 'haiku' | 'gpt-mini' | 'gemini' };
+
+config({ path: path.join(process.cwd(), '.env.local') });
 
 function parseArgs(): CliArgs {
   const args = process.argv.slice(2);
@@ -80,7 +80,7 @@ async function runOne(
 ): Promise<{ spec: FormSpecType; meta: RunMeta }> {
   const llm =
     modelKey === 'gpt-mini' ? gateway('openai/gpt-4o-mini')
-    : modelKey === 'gemini' ? google('gemini-2.5-flash')
+    : modelKey === 'gemini' ? gateway('google/gemini-2.5-flash')
     : gateway('anthropic/claude-haiku-4-5');
   const start = Date.now();
   let firstFieldAt: number | null = null;
@@ -93,9 +93,6 @@ async function runOne(
     prompt: complaint,
     ...(modelKey === 'gpt-mini' && {
       providerOptions: { openai: { strictJsonSchema: false } },
-    }),
-    ...(modelKey === 'gemini' && {
-      providerOptions: { google: { structuredOutputs: false } },
     }),
   });
 

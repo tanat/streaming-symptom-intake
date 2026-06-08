@@ -48,3 +48,6 @@ logs/intake-streams/*.ndjson
 
 # VCR cache (eval replay, gitignored — regenerate with EVAL_VCR=1)
 evals/cache/
+
+# agent memory (lives in ~/.claude, never in the repo)
+memory/

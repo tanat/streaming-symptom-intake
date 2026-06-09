@@ -6,11 +6,11 @@
 
 ## What it is and why
 
-This is the second project in your AI Product Engineer portfolio after Clinical Trial Extractor. It teaches you a **different** Vercel AI SDK v6 primitive — streaming structured generation, which **renders UI on the fly**.
+Streaming **structured generation** that renders UI on the fly: the server streams typed JSON, the client renders it field by field as it arrives, **preserving user input state across updates**.
 
-Specifically: you learn `streamText({ output: Output.object({ schema }) })` (server) + `experimental_useObject` (client) — the pair that lets the model stream typed JSON while the UI renders it as it arrives, **preserving user input state across updates**.
+Built on `streamText({ output: Output.object({ schema }) })` (server) + `experimental_useObject` (client) — the pair that streams typed JSON while the UI renders it live.
 
-And you learn the **closed component registry pattern** — a production-grade technique where the model doesn't emit JSX (which is scary security-wise and impossible to audit), but instead only picks a component ID from a pre-registered set and fills in typed props.
+It also demonstrates the **closed component registry pattern**: the model never emits JSX (scary security-wise and impossible to audit) — it only picks a component ID from a pre-registered set and fills in typed props.
 
 ## Wow moment
 

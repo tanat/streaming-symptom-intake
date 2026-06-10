@@ -17,20 +17,32 @@ export function CheckboxField({ field, control }: Props) {
         name={field.id}
         control={control}
         defaultValue={false}
-        render={({ field: rhf }) => (
-          <label className="flex items-center gap-2 text-sm">
-            <Checkbox
-              checked={rhf.value === true}
-              onCheckedChange={(next) => rhf.onChange(next === true)}
-            />
-            <span>
-              {field.label}
-              {field.required ? (
-                <span className="text-destructive"> *</span>
-              ) : null}
-            </span>
-          </label>
-        )}
+        render={({ field: rhf }) => {
+          const checked = rhf.value === true;
+          return (
+            <label
+              className={`flex cursor-pointer items-center gap-2.5 rounded-lg border px-3 py-2 text-sm transition-colors ${
+                checked
+                  ? 'border-primary/50 bg-accent/60 text-foreground'
+                  : 'border-border bg-card hover:bg-muted/60'
+              }`}
+            >
+              <Checkbox
+                checked={checked}
+                onCheckedChange={(next) => rhf.onChange(next === true)}
+              />
+              <span>
+                {field.label}
+                {field.required ? (
+                  <span className="text-destructive" aria-hidden>
+                    {' '}
+                    *
+                  </span>
+                ) : null}
+              </span>
+            </label>
+          );
+        }}
       />
     </div>
   );

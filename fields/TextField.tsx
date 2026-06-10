@@ -12,10 +12,14 @@ type Props = {
 
 export function TextField({ field, control }: Props) {
   return (
-    <div className="grid gap-1.5">
-      <Label htmlFor={field.id}>
-        {field.label}
-        {field.required ? <span className="text-destructive"> *</span> : null}
+    <div className="grid gap-2">
+      <Label htmlFor={field.id} className="text-foreground/90">
+        <span>{field.label}</span>
+        {field.required ? (
+          <span className="text-destructive" aria-hidden>
+            *
+          </span>
+        ) : null}
       </Label>
       <Controller
         name={field.id}

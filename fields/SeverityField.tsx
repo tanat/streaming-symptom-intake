@@ -13,11 +13,14 @@ type Props = {
 export function SeverityField({ field, control }: Props) {
   const max = field.scale ?? 10;
   return (
-    <div className="grid gap-2">
-      <Label htmlFor={field.id}>
-        {field.label}
-        <span className="ml-1 text-muted-foreground">(0–{max})</span>
-        {field.required ? <span className="text-destructive"> *</span> : null}
+    <div className="grid gap-2.5">
+      <Label htmlFor={field.id} className="text-foreground/90">
+        <span>{field.label}</span>
+        {field.required ? (
+          <span className="text-destructive" aria-hidden>
+            *
+          </span>
+        ) : null}
       </Label>
       <Controller
         name={field.id}
@@ -25,21 +28,37 @@ export function SeverityField({ field, control }: Props) {
         defaultValue={0}
         render={({ field: rhf }) => {
           const current = typeof rhf.value === 'number' ? rhf.value : 0;
+          const ratio = max > 0 ? current / max : 0;
+          const tone =
+            current === 0
+              ? 'bg-muted text-muted-foreground'
+              : ratio < 0.4
+                ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-200'
+                : ratio < 0.7
+                  ? 'bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-200'
+                  : 'bg-red-100 text-red-800 dark:bg-red-950/50 dark:text-red-200';
           return (
-            <div className="grid gap-1">
-              <Slider
-                min={0}
-                max={max}
-                step={1}
-                value={[current]}
-                onValueChange={(v) =>
-                  rhf.onChange(Array.isArray(v) ? v[0] : v)
-                }
-              />
+            <div className="grid gap-2">
+              <div className="flex items-center gap-3">
+                <Slider
+                  className="flex-1"
+                  min={0}
+                  max={max}
+                  step={1}
+                  value={[current]}
+                  onValueChange={(v) =>
+                    rhf.onChange(Array.isArray(v) ? v[0] : v)
+                  }
+                />
+                <span
+                  className={`min-w-12 rounded-md px-2 py-0.5 text-center text-sm font-semibold tabular-nums ${tone}`}
+                >
+                  {current}/{max}
+                </span>
+              </div>
               <div className="flex justify-between text-xs text-muted-foreground">
-                <span>0 (none)</span>
-                <span className="font-medium text-foreground">{current}</span>
-                <span>{max} (worst)</span>
+                <span>No pain</span>
+                <span>Worst imaginable</span>
               </div>
             </div>
           );

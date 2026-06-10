@@ -12,10 +12,14 @@ type Props = {
 
 export function MultiselectField({ field, control }: Props) {
   return (
-    <div className="grid gap-2">
-      <Label>
-        {field.label}
-        {field.required ? <span className="text-destructive"> *</span> : null}
+    <div className="grid gap-2.5">
+      <Label className="text-foreground/90">
+        <span>{field.label}</span>
+        {field.required ? (
+          <span className="text-destructive" aria-hidden>
+            *
+          </span>
+        ) : null}
       </Label>
       <Controller
         name={field.id}
@@ -30,7 +34,11 @@ export function MultiselectField({ field, control }: Props) {
                 return (
                   <label
                     key={opt.value}
-                    className="flex items-center gap-2 text-sm"
+                    className={`flex cursor-pointer items-center gap-2.5 rounded-lg border px-3 py-2 text-sm transition-colors ${
+                      checked
+                        ? 'border-primary/50 bg-accent/60 text-foreground'
+                        : 'border-border bg-card hover:bg-muted/60'
+                    }`}
                   >
                     <Checkbox
                       checked={checked}

@@ -33,8 +33,18 @@ export class FieldErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.error) {
       return (
-        <div className="rounded border border-destructive/50 bg-destructive/5 px-3 py-2 text-xs text-destructive">
-          Field {this.props.fieldId ?? 'unknown'} failed to render. Skipping.
+        <div className="flex items-center gap-2 rounded-lg border border-destructive/40 bg-destructive/5 px-3 py-2 text-xs text-destructive">
+          <span
+            className="size-1.5 shrink-0 rounded-full bg-destructive"
+            aria-hidden
+          />
+          <span>
+            Field{' '}
+            <span className="font-mono">
+              {this.props.fieldId ?? 'unknown'}
+            </span>{' '}
+            failed to render. Skipping.
+          </span>
         </div>
       );
     }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { Mic } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useSpeechRecognition } from './useSpeechRecognition';
 
@@ -27,8 +28,9 @@ export function VoiceButton({ onTranscript }: Props) {
   return (
     <Button
       type="button"
-      size="sm"
+      size="lg"
       variant={isListening ? 'default' : 'outline'}
+      className="gap-2"
       onMouseDown={handlePress}
       onMouseUp={handleRelease}
       onMouseLeave={isListening ? handleRelease : undefined}
@@ -36,7 +38,20 @@ export function VoiceButton({ onTranscript }: Props) {
       onTouchEnd={handleRelease}
       aria-pressed={isListening}
     >
-      {isListening ? '● Listening — release to stop' : '🎙 Hold to talk'}
+      {isListening ? (
+        <>
+          <span
+            className="intake-live-dot size-2 rounded-full bg-current"
+            aria-hidden
+          />
+          Listening — release to stop
+        </>
+      ) : (
+        <>
+          <Mic className="size-4" aria-hidden />
+          Hold to talk
+        </>
+      )}
     </Button>
   );
 }

@@ -41,15 +41,25 @@ export default async function EvalPage() {
 
   return (
     <main className="mx-auto grid w-full max-w-6xl gap-6 px-4 py-8 lg:py-12">
-      <header className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Eval results</h1>
-        <Link href="/" className="text-sm underline">
-          ← back to intake
+      <header className="flex items-center justify-between border-b border-border/60 pb-4">
+        <div className="grid gap-0.5">
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Eval results
+          </h1>
+          <p className="text-sm text-muted-foreground">
+            Offline accuracy and latency for the form generator.
+          </p>
+        </div>
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+        >
+          ← Back to intake
         </Link>
       </header>
 
       {!last ? (
-        <div className="rounded border bg-muted/40 px-4 py-6 text-sm text-muted-foreground">
+        <div className="rounded-xl border border-dashed bg-muted/40 px-4 py-6 text-sm text-muted-foreground">
           No eval runs yet. Run <code>pnpm eval</code> (or{' '}
           <code>pnpm eval:gpt-mini</code>) to populate this view.
         </div>
@@ -63,7 +73,7 @@ export default async function EvalPage() {
               {last.runId} · prompt {last.promptVersion} · schema{' '}
               {last.schemaVersion}
             </p>
-            <div className="grid gap-3 rounded border bg-card p-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-3 rounded-xl border bg-card p-5 shadow-sm ring-1 ring-foreground/[0.03] sm:grid-cols-2 lg:grid-cols-3">
               <Stat label="Field Jaccard" value={pct(last.aggregate.fieldJaccard)} />
               <Stat
                 label="Section Jaccard"
@@ -90,7 +100,7 @@ export default async function EvalPage() {
 
           <section className="grid gap-2">
             <h2 className="text-lg font-semibold">Per-complaint detail</h2>
-            <div className="overflow-x-auto rounded border bg-card">
+            <div className="overflow-x-auto rounded-xl border bg-card shadow-sm ring-1 ring-foreground/[0.03]">
               <table className="w-full text-sm">
                 <thead className="bg-muted/50 text-left">
                   <tr>
@@ -129,7 +139,7 @@ export default async function EvalPage() {
           {recent.length > 1 ? (
             <section className="grid gap-2">
               <h2 className="text-lg font-semibold">Recent runs side-by-side</h2>
-              <div className="overflow-x-auto rounded border bg-card">
+              <div className="overflow-x-auto rounded-xl border bg-card shadow-sm ring-1 ring-foreground/[0.03]">
                 <table className="w-full text-sm">
                   <thead className="bg-muted/50 text-left">
                     <tr>

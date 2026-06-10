@@ -12,13 +12,19 @@ type Props = {
 
 export function SliderField({ field, control }: Props) {
   return (
-    <div className="grid gap-2">
-      <Label htmlFor={field.id}>
-        {field.label}
+    <div className="grid gap-2.5">
+      <Label htmlFor={field.id} className="text-foreground/90">
+        <span>{field.label}</span>
         {field.unit ? (
-          <span className="ml-1 text-muted-foreground">({field.unit})</span>
+          <span className="text-xs font-normal text-muted-foreground">
+            {field.unit}
+          </span>
         ) : null}
-        {field.required ? <span className="text-destructive"> *</span> : null}
+        {field.required ? (
+          <span className="text-destructive" aria-hidden>
+            *
+          </span>
+        ) : null}
       </Label>
       <Controller
         name={field.id}
@@ -28,19 +34,26 @@ export function SliderField({ field, control }: Props) {
           const current =
             typeof rhf.value === 'number' ? rhf.value : field.min;
           return (
-            <div className="grid gap-1">
-              <Slider
-                min={field.min}
-                max={field.max}
-                step={field.step ?? 1}
-                value={[current]}
-                onValueChange={(v) =>
-                  rhf.onChange(Array.isArray(v) ? v[0] : v)
-                }
-              />
-              <div className="text-xs text-muted-foreground">
-                {current}
-                {field.unit ? ` ${field.unit}` : ''}
+            <div className="grid gap-2">
+              <div className="flex items-center gap-3">
+                <Slider
+                  className="flex-1"
+                  min={field.min}
+                  max={field.max}
+                  step={field.step ?? 1}
+                  value={[current]}
+                  onValueChange={(v) =>
+                    rhf.onChange(Array.isArray(v) ? v[0] : v)
+                  }
+                />
+                <span className="min-w-14 rounded-md bg-muted px-2 py-0.5 text-center text-sm font-semibold tabular-nums text-foreground">
+                  {current}
+                  {field.unit ? ` ${field.unit}` : ''}
+                </span>
+              </div>
+              <div className="flex justify-between text-xs text-muted-foreground tabular-nums">
+                <span>{field.min}</span>
+                <span>{field.max}</span>
               </div>
             </div>
           );

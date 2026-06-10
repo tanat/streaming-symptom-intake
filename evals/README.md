@@ -14,10 +14,9 @@ Each run appends one entry to `results.json`. Never edit existing entries — th
 
 ## Required env
 
-- `ANTHROPIC_API_KEY` — required for default `pnpm eval` run.
-- `OPENAI_API_KEY` — required for `pnpm eval:gpt-mini`.
+- `AI_GATEWAY_API_KEY` — required for every run. All models route through the Vercel AI Gateway, so this single key covers Anthropic, OpenAI, and Gemini.
 
-Drop them into `.env.local` (loaded by Next.js automatically when used via the dev server) or export them in your shell when running the harness directly with `tsx`.
+Drop it into `.env.local` (loaded by Next.js automatically when used via the dev server) or export it in your shell when running the harness directly with `tsx`.
 
 ## What it measures
 

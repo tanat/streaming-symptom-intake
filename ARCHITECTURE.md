@@ -15,11 +15,11 @@
 | Schema validation | Zod 4 | discriminated union is the heart of the project |
 | Primary model | Claude Haiku 4.5 | `gateway('anthropic/claude-haiku-4-5')` — small + fast wins for streaming feel, routed via Vercel AI Gateway |
 | Comparison model | gpt-4o-mini | `gateway('openai/gpt-4o-mini')` — alternative for eval comparison, also via Gateway |
-| Third model (Google direct) | Gemini 2.5 Flash | `google('gemini-2.5-flash')` via `@ai-sdk/google` — direct, not routed through Gateway |
+| Third model | Gemini 2.5 Flash | `gateway('google/gemini-2.5-flash')` — Gemini also routes through the gateway on the single `AI_GATEWAY_API_KEY` |
 | State management | React 19 + react-hook-form | rhf for form state, useObject for streaming |
 | Voice input (optional) | Browser SpeechRecognition API | free, no keys, no deps |
 | Observability log | Local NDJSON file | append-only stream events |
-| Deploy | Vercel free tier | env: `AI_GATEWAY_API_KEY` (required), `GOOGLE_GENERATIVE_AI_API_KEY` (optional, for Gemini) |
+| Deploy | Vercel free tier | env: `AI_GATEWAY_API_KEY` (required) — covers all providers, including Gemini |
 
 **Deliberately not used:** Whisper (browser SpeechRecognition is enough), `streamUI` (see DECISIONS), server-side DB (the form is stateless), authentication.
 
@@ -371,7 +371,6 @@ return <FieldComponent field={result.data} />;
 ```ts
 // app/api/intake/route.ts
 import { streamText, Output, gateway } from 'ai';
-import { google } from '@ai-sdk/google';
 import { FormSpec } from '@/schemas/v1/form-spec';
 import { intakeSystemPrompt, PROMPT_VERSION } from '@/intake/prompt';
 
@@ -383,7 +382,7 @@ export async function POST(req: Request) {
 
   const llm =
     model === 'gpt-mini' ? gateway('openai/gpt-4o-mini')
-    : model === 'gemini' ? google('gemini-2.5-flash')
+    : model === 'gemini' ? gateway('google/gemini-2.5-flash')
     : gateway('anthropic/claude-haiku-4-5');
 
   const result = streamText({

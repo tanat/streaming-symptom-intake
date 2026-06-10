@@ -65,7 +65,7 @@ pnpm eval:gpt-mini
 pnpm eval:gemini  # Gemini 2.5 Flash
 ```
 
-`.env.local` needs `AI_GATEWAY_API_KEY` (Anthropic + OpenAI routed through Vercel AI Gateway) and, optionally, `GOOGLE_GENERATIVE_AI_API_KEY` for the Gemini path (Google is wired directly via `@ai-sdk/google`).
+`.env.local` needs `AI_GATEWAY_API_KEY` — all models (Anthropic, OpenAI, and Gemini) route through the Vercel AI Gateway, so the single key covers every provider.
 
 ### Voice support
 

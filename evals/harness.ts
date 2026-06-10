@@ -8,7 +8,8 @@
  *   pnpm eval:gpt-mini        (gpt-4o-mini)
  *   pnpm eval:gemini          (gemini-2.5-flash)
  *
- * Requires AI_GATEWAY_API_KEY / GOOGLE_GENERATIVE_AI_API_KEY in env.
+ * Requires AI_GATEWAY_API_KEY in env (all models route through the
+ * Vercel AI Gateway, including Gemini).
  */
 
 import { promises as fs } from 'node:fs';
@@ -136,13 +137,9 @@ async function main() {
     : modelKey === 'gemini' ? 'gemini-2.5-flash'
     : 'claude-haiku-4-5';
 
-  if (modelKey === 'gpt-mini' && !process.env.AI_GATEWAY_API_KEY) {
-    throw new Error('AI_GATEWAY_API_KEY not set');
-  }
-  if (modelKey === 'gemini' && !process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
-    throw new Error('GOOGLE_GENERATIVE_AI_API_KEY not set');
-  }
-  if (modelKey === 'haiku' && !process.env.AI_GATEWAY_API_KEY) {
+  // All models (incl. Gemini) route through the Vercel AI Gateway,
+  // so the single AI_GATEWAY_API_KEY covers every provider.
+  if (!process.env.AI_GATEWAY_API_KEY) {
     throw new Error('AI_GATEWAY_API_KEY not set');
   }
 

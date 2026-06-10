@@ -11,7 +11,7 @@ type Props = {
 };
 
 export function SeverityField({ field, control }: Props) {
-  const max = field.scale ?? 10;
+  const max = 10; // fixed 1–10 severity scale (no longer model-controlled)
   return (
     <div className="grid gap-2.5">
       <Label htmlFor={field.id} className="text-foreground/90">

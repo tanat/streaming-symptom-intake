@@ -44,7 +44,9 @@ export const SliderFieldSchema = Base.extend({
 
 export const SeverityFieldSchema = Base.extend({
   type: z.literal('severity'),
-  scale: z.literal(10).optional(),
+  // The scale is a fixed 1–10 UI constant (see SeverityField), so it's not part
+  // of the model-facing schema. (A numeric enum like `z.literal(10)` also breaks
+  // Gemini's structured-output, which requires enum values to be strings.)
 });
 
 export const DateFieldSchema = Base.extend({

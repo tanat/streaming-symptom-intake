@@ -1,5 +1,7 @@
 # Streaming Symptom Intake
 
+**[Live demo →](https://streaming-symptom-intake.vercel.app)**
+
 > The user types a complaint as a single line — and a medical intake form streams onto the page field by field: vitals, OPQRST, risk factors, red flags. Each field is a typed React component from a closed registry. The model picks only component IDs and props — no JSX.
 
 ---

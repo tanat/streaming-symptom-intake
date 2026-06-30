@@ -2,6 +2,8 @@
 
 **[Live demo →](https://streaming-symptom-intake.vercel.app)**
 
+![A medical triage form generated field by field from a one-line complaint](docs/screenshot.png)
+
 > The user types a complaint as a single line — and a medical intake form streams onto the page field by field: vitals, OPQRST, risk factors, red flags. Each field is a typed React component from a closed registry. The model picks only component IDs and props — no JSX.
 
 ---

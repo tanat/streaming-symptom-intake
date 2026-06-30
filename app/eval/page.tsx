@@ -74,26 +74,35 @@ export default async function EvalPage() {
               {last.schemaVersion}
             </p>
             <div className="grid gap-3 rounded-xl border bg-card p-5 shadow-sm ring-1 ring-foreground/[0.03] sm:grid-cols-2 lg:grid-cols-3">
-              <Stat label="Field Jaccard" value={pct(last.aggregate.fieldJaccard)} />
               <Stat
-                label="Section Jaccard"
-                value={pct(last.aggregate.sectionJaccard)}
-              />
-              <Stat
-                label="Critical hit"
-                value={pct(last.aggregate.criticalFieldHit)}
-              />
-              <Stat
-                label="Critical hit rate"
+                label="Critical field coverage"
                 value={pct(last.aggregate.criticalFieldHitRate)}
+                hint="Share of must-have fields the form included"
               />
               <Stat
                 label="Partial-render safe"
                 value={pct(last.aggregate.partialRenderSafe)}
+                hint="Every streamed partial validated & rendered cleanly"
               />
               <Stat
                 label="TTFF p50 / p95"
                 value={`${fmtMs(last.aggregate.timeToFirstFieldP50Ms)} / ${fmtMs(last.aggregate.timeToFirstFieldP95Ms)}`}
+                hint="Time to first field on screen"
+              />
+              <Stat
+                label="Field-ID overlap"
+                value={pct(last.aggregate.fieldJaccard)}
+                hint="Exact field-id match vs a hand-authored target — strict by design, not an accuracy score"
+              />
+              <Stat
+                label="Section-ID overlap"
+                value={pct(last.aggregate.sectionJaccard)}
+                hint="Exact section-id match vs the target"
+              />
+              <Stat
+                label="All critical fields"
+                value={pct(last.aggregate.criticalFieldHit)}
+                hint="All-or-nothing per complaint — the strictest cut"
               />
             </div>
           </section>
@@ -187,13 +196,26 @@ export default async function EvalPage() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({
+  label,
+  value,
+  hint,
+}: {
+  label: string;
+  value: string;
+  hint?: string;
+}) {
   return (
     <div className="grid gap-0.5">
       <div className="text-xs uppercase tracking-wide text-muted-foreground">
         {label}
       </div>
       <div className="text-lg font-semibold">{value}</div>
+      {hint ? (
+        <div className="text-[0.7rem] leading-snug text-muted-foreground/80">
+          {hint}
+        </div>
+      ) : null}
     </div>
   );
 }

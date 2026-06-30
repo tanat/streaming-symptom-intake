@@ -8,7 +8,7 @@
 
 | Layer | Technology | Version / comment |
 |------|------------|----------------------|
-| Framework | Next.js 15 App Router | React 19 RSC + Client Components |
+| Framework | Next.js 16 App Router | React 19 RSC + Client Components |
 | Language | TypeScript strict | discriminated union — types must be precise |
 | Styling | Tailwind CSS + shadcn/ui | Form components — input, select, slider, radio-group, checkbox |
 | AI SDK | Vercel AI SDK v6 | `ai` server side (`streamText` + `Output.object`, `gateway` provider), `@ai-sdk/react` client side |

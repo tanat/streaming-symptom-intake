@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Streaming Symptom Intake",
-  description: "Type-safe, streaming triage form generator powered by Claude.",
+  description: "Type-safe medical triage forms, streamed field by field from an LLM.",
 };
 
 export default function RootLayout({
